@@ -10,6 +10,8 @@ import { Carousel } from "react-responsive-carousel";
 import { ImageOrientation } from "../components/utils/image-orientation";
 import "../components/styles/artist.css";
 import exitBlack from "../../public/icons/exit-black.png";
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -34,6 +36,8 @@ const Artist = ({ data }) => {
     }
   };
 
+
+
   // console.log(data.prismicArtist.data.gallery);
     const artistGallery = data.prismicArtist.data.gallery.filter(artist => artist.artist_image.fluid !== null)
       .map((artist, index) => (
@@ -51,7 +55,16 @@ const Artist = ({ data }) => {
 
 
   return (
+
+
+
+
     <div className='single-artist-page-con'>
+
+      <Helmet>
+          <body className="single-artist-body" />
+      </Helmet>
+
       <div className="exit-artist-button-con">
         <Link to={`/`}>
           <img src={exitBlack} />
