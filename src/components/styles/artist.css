@@ -36,9 +36,9 @@
     height:-webkit-fill-available;*/
     /*height:100vh;*/
   }   
-  /*.gFKIvu {
-    min-height: 100vh !important;
-  }*/   
+  .gFKIvu {
+    min-height: -webkit-fill-available !important;
+  }   
 }
 .carousel .slide img {
   /*margin: 0;
