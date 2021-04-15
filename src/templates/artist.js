@@ -63,16 +63,7 @@ const Artist = ({ data }) => {
         </Link>
       </div>
 
-      <Carousel
-        showIndicators={false}
-        showThumbs={false}
-        infiniteLoop={true}
-        transitionTime={0}
-        showStatus={false}
-        onChange={index => updateCurrentSlide(index)}
-      >
-        {artistGallery}
-      </Carousel>
+
 
       <div className="artist-artist-title-and-counter-con">
         <p>
