@@ -57,10 +57,10 @@ body.single-artist-body {
 
 @media only screen and (max-width: 480px) {
   .carousel .control-next.control-arrow {
-    width: 0%;
+    width: 50%;
   }
   .carousel .control-prev.control-arrow {
-    width: 0%;
+    width: 50%;
   }  
 }
 
