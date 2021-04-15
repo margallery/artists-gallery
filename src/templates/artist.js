@@ -56,7 +56,7 @@ const Artist = ({ data }) => {
 
 
   return (
-    <div>
+    <div className='single-artist-page-con'>
       <div className="exit-artist-button-con">
         <Link to={`/`}>
           <img src={exitBlack} />

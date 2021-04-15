@@ -1,9 +1,16 @@
+.single-single-artist-page-con {
+  overflow: hidden;
+}
+
 .carousel .slide {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
+}
+.gFKIvu {
+  overflow: hidden;
 }
 @media (hover: none){
   /*.carousel .slide {
@@ -14,10 +21,10 @@
     min-height: -webkit-fill-available;
     height: -webkit-fill-available;
   }*/   
-  .gFKIvu {
+  /*.gFKIvu {
     min-height: -webkit-fill-available;
     height: -webkit-fill-available;
-  }    
+  }*/    
 }
 @media only screen and (max-width: 480px) {
   /*.carousel .slide {
@@ -27,11 +34,11 @@
   .carousel .slide {
     /*min-height: -webkit-fill-available;
     height:-webkit-fill-available;*/
-    height:90vh;
+    /*height:100vh;*/
   }   
-  .gFKIvu {
-    min-height: 90vh !important;
-  }   
+  /*.gFKIvu {
+    min-height: 100vh !important;
+  }*/   
 }
 .carousel .slide img {
   /*margin: 0;
