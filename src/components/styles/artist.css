@@ -14,6 +14,13 @@ body {
   width: 100vw;
   height: 100vh;
 }
+@media (hover: none){
+  .carousel .slide {
+    min-height: -webkit-fill-available;
+    height:-webkit-fill-available;
+  }     
+}
+
 
 .carousel .slide img {
   /*width: 24%;*/
@@ -68,39 +75,44 @@ body {
   border-bottom: 0px;
   border-left: 0px;
 }
-
-.carousel .carousel-status {
-  font-family: "stencil";
-  color: black;
-  font-size: 16px;
-  position: fixed;
-  bottom: 0 !important;
-  text-shadow: none;
-  text-align: center;
-  width: 100%;
-}
-
 .artist-artist-title-and-counter-con {
   position: fixed;
   text-align: center;
   width: 100%;
-  bottom: 0;
+  bottom: -10px;
 }
 .artist-artist-title-and-counter-con p {
   font-size: 20px;
+  font-family: 'Helvetica Neue LT Pro';
 }
 
 img.artist-artist-img.landscape {
-  width:41%;
+  height:86%;
+  width:auto;
 }
 
 img.artist-artist-img.portrait {
-  width:24%;
+  height:86%;
+  width:auto;
 }
 
 img.artist-artist-img.square {
-  width:29%;
+  height:86%;
+  width:auto;
 }
-span.counter {
-  font-family: "stencil";
+@media only screen and (max-width: 480px) {
+  img.artist-artist-img.landscape {
+    width:90%;
+    height:auto;
+  }
+  img.artist-artist-img.portrait {
+    width:90%;
+    height:auto;
+  }
+  img.artist-artist-img.square {
+    width:90%;
+    height:auto;
+  }  
 }
+
+

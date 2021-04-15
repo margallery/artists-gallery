@@ -72,18 +72,6 @@ const Artist = ({ data }) => {
         onChange={index => updateCurrentSlide(index)}
       >
         {artistGallery}
-        {/* <div>
-          <img className="carousel-img" src="img/9 VOLT.jpg" />
-          <p className="legend">Legend 1</p>
-        </div>
-        <div>
-          <img className="carousel-img" src="img/9 VOLT2.jpg" />
-          <p className="legend">Legend 2</p>
-        </div>
-        <div>
-          <img className="carousel-img" src="img/9VOLT1.jpg" />
-          <p className="legend">Legend 3</p>
-        </div> */}
       </Carousel>
 
       <div className="artist-artist-title-and-counter-con">
