@@ -10,11 +10,13 @@
     min-height: -webkit-fill-available;
     height:-webkit-fill-available;
   } */
-  .carousel .slide {
-    height:90vh;
-  }   
+  /*.carousel .slide {
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+  }*/   
   .gFKIvu {
     min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
   }    
 }
 @media only screen and (max-width: 480px) {
@@ -22,8 +24,13 @@
     min-height: -webkit-fill-available;
     height:-webkit-fill-available;
   } */
+  .carousel .slide {
+    /*min-height: -webkit-fill-available;
+    height:-webkit-fill-available;*/
+    height:90vh;
+  }   
   .gFKIvu {
-    min-height: -webkit-fill-available !important;
+    min-height: 90vh !important;
   }   
 }
 .carousel .slide img {
