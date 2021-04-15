@@ -11,11 +11,6 @@ import { ImageOrientation } from "../components/utils/image-orientation";
 import "../components/styles/artist.css";
 import exitBlack from "../../public/icons/exit-black.png";
 
-const PageContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-`;
-
 
 
 const Artist = ({ data }) => {
@@ -63,7 +58,9 @@ const Artist = ({ data }) => {
         </Link>
       </div>
 
-
+     
+        {artistGallery}
+      </Carousel>
 
       <div className="artist-artist-title-and-counter-con">
         <p>
