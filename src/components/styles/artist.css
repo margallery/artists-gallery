@@ -1,0 +1,106 @@
+img.index-image {
+  width: 200px;
+}
+
+body {
+
+}
+
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel .slide img {
+  /*width: 24%;*/
+  /*top:50%;
+	transform: translate(-50%, -50%);
+	position:absolute;*/
+}
+
+.carousel .control-next.control-arrow {
+  background-color: none;
+  width: 50%;
+  /* cursor: url(/icons/forward-arrow-124pxD.png), auto; */
+
+  cursor: url(/icons/next@1x.png) 0 0, pointer;
+  cursor: -webkit-image-set(
+        url(/icons/next@1x.png) 1x,
+        url(/icons/next@2x.png) 2x
+      )
+      0 0,
+    pointer;
+}
+.carousel .control-prev.control-arrow {
+  background-color: none;
+  width: 50%;
+  /* cursor: url(/icons/prev-arrow-124px.png), auto;	 */
+
+  cursor: url(/icons/prev@1x.png) 0 0, pointer;
+  cursor: -webkit-image-set(
+        url(/icons/prev@1x.png) 1x,
+        url(/icons/prev@2x.png) 2x
+      )
+      0 0,
+    pointer;
+}
+
+.exit-artist-button-con {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  /*background-color: blue;*/
+  z-index: 400000;
+}
+.carousel.carousel-slider .control-arrow:hover {
+  background: none;
+}
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow:before {
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+
+.carousel .carousel-status {
+  font-family: "stencil";
+  color: black;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0 !important;
+  text-shadow: none;
+  text-align: center;
+  width: 100%;
+}
+
+.artist-artist-title-and-counter-con {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+.artist-artist-title-and-counter-con p {
+  font-size: 20px;
+}
+
+img.artist-artist-img.landscape {
+  width:41%;
+}
+
+img.artist-artist-img.portrait {
+  width:24%;
+}
+
+img.artist-artist-img.square {
+  width:29%;
+}
+span.counter {
+  font-family: "stencil";
+}
