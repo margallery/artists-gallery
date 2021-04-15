@@ -1,5 +1,6 @@
 body.single-artist-body {
   overflow: hidden;
+  touch-action: manipulation;
 }
 
 
