@@ -59,8 +59,7 @@ const Artist = ({ data }) => {
       </div>
 
      
-        {artistGallery}
-      </Carousel>
+
 
       <div className="artist-artist-title-and-counter-con">
         <p>
