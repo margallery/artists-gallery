@@ -22,6 +22,9 @@
     min-height: -webkit-fill-available;
     height:-webkit-fill-available;
   } */
+  .gFKIvu {
+    min-height: -webkit-fill-available !important;
+  }   
 }
 .carousel .slide img {
   /*margin: 0;
