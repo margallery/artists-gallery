@@ -2,9 +2,7 @@ body.single-artist-body {
   overflow: hidden;
 }
 
-.single-single-artist-page-con {
-  overflow: hidden;
-}
+
 
 .carousel .slide {
   display: flex;
@@ -13,37 +11,17 @@ body.single-artist-body {
   width: 100vw;
   height: 100vh;
 }
-.gFKIvu {
-  overflow: hidden;
-}
 @media (hover: none){
-  /*.carousel .slide {
-    min-height: -webkit-fill-available;
-    height:-webkit-fill-available;
-  } */
-  /*.carousel .slide {
-    min-height: -webkit-fill-available;
-    height: -webkit-fill-available;
-  }*/   
-  /*.gFKIvu {
-    min-height: -webkit-fill-available;
-    height: -webkit-fill-available;
-  }*/    
-}
-@media only screen and (max-width: 480px) {
-  /*.carousel .slide {
-    min-height: -webkit-fill-available;
-    height:-webkit-fill-available;
-  } */
   .carousel .slide {
-    /*min-height: -webkit-fill-available;
-    height:-webkit-fill-available;*/
-    /*height:100vh;*/
-  }   
-  .gFKIvu {
-    min-height: -webkit-fill-available !important;
-  }   
+    height: 93vh;
+  } 
 }
+
+/*@media only screen and (max-width: 480px) {
+  .carousel .slide {
+    height: 93vh;
+  }   
+}*/
 .carousel .slide img {
   /*margin: 0;
   position: absolute;
@@ -51,6 +29,7 @@ body.single-artist-body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);*/
+  /*transform: translate(0%, 16%);*/
 }
 .carousel .control-next.control-arrow {
   background-color: none;
