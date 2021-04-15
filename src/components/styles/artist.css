@@ -13,13 +13,13 @@ body.single-artist-body {
 }
 @media (hover: none){
   .carousel .slide {
-    height: 93vh;
+    height: 90vh;
   } 
 }
 
 /*@media only screen and (max-width: 480px) {
   .carousel .slide {
-    height: 93vh;
+    height: 90vh;
   }   
 }*/
 .carousel .slide img {
