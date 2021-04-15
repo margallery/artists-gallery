@@ -55,6 +55,16 @@ body.single-artist-body {
     pointer;
 }
 
+@media only screen and (max-width: 480px) {
+  .carousel .control-next.control-arrow {
+    width: 0%;
+  }
+  .carousel .control-prev.control-arrow {
+    width: 0%;
+  }  
+}
+
+
 .exit-artist-button-con {
   position: fixed;
   top: 0;
