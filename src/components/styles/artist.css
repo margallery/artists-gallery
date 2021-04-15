@@ -1,39 +1,23 @@
-img.index-image {
-  width: 200px;
-}
-
-body {
-
-}
-
-
 .carousel .slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 @media (hover: none){
   .carousel .slide {
     min-height: -webkit-fill-available;
     height:-webkit-fill-available;
-  }     
+  } 
+  .gFKIvu {
+    min-height: -webkit-fill-available;
+  }    
 }
-
-
-.carousel .slide img {
-  /*width: 24%;*/
-  /*top:50%;
-	transform: translate(-50%, -50%);
-	position:absolute;*/
-}
-
+.carousel .slide img {}
 .carousel .control-next.control-arrow {
   background-color: none;
   width: 50%;
-  /* cursor: url(/icons/forward-arrow-124pxD.png), auto; */
-
   cursor: url(/icons/next@1x.png) 0 0, pointer;
   cursor: -webkit-image-set(
         url(/icons/next@1x.png) 1x,
@@ -45,8 +29,6 @@ body {
 .carousel .control-prev.control-arrow {
   background-color: none;
   width: 50%;
-  /* cursor: url(/icons/prev-arrow-124px.png), auto;	 */
-
   cursor: url(/icons/prev@1x.png) 0 0, pointer;
   cursor: -webkit-image-set(
         url(/icons/prev@1x.png) 1x,
