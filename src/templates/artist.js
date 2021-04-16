@@ -62,6 +62,7 @@ const Artist = ({ data }) => {
     <div className='single-artist-page-con'>
 
       <Helmet>
+          <html className='single-artist-html' />
           <body className="single-artist-body" />
       </Helmet>
 
