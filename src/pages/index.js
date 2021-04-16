@@ -84,9 +84,6 @@ const Index = ({ data }) => {
             document.querySelector("#group-E").scrollIntoView({
               behavior: "smooth", block: "start",})}>E</li>
         <li onClick={() =>
-            document.querySelector("#group-E").scrollIntoView({
-              behavior: "smooth", block: "start",})}>E</li>
-        <li onClick={() =>
             document.querySelector("#group-F").scrollIntoView({
               behavior: "smooth", block: "start",})}>F</li>
         <li onClick={() =>
@@ -303,7 +300,7 @@ const Index = ({ data }) => {
         {alphabet}
                   
         </div>
-        <h1 className='scrollSpyFix'>
+        <h1 className='artist-title scrollSpyFix'>
           By Martinez Gallery
         </h1>
       </div>  

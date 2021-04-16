@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
 //     opacity: 0;
 //     transition: 250ms opacity ease;
 //   }
+//   // .artist-list {
+//   //   opacity: 0;
+//   //   transition: 250ms opacity ease;    
+//   // }
 // }
 
 // html.wf-active,
@@ -15,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
 //   main{
 //     opacity: 1;
 //   }
+//   // .artist-list {
+//   //   opacity: 1;    
+//   // }
 // }
 
 body {
