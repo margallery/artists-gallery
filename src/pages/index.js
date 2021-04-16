@@ -148,7 +148,7 @@ const Index = ({ data }) => {
               behavior: "smooth", block: "start",})}>Z</li>                                                                  
         <li onClick={() =>
             document.querySelector("#group-1").scrollIntoView({
-              behavior: "smooth", block: "start",})}>0-9</li>
+              behavior: "smooth", block: "start",})}>?</li>
       </ul>
     );
   };

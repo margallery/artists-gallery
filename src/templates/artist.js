@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { graphql, Link } from "gatsby";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { withPreview } from "gatsby-source-prismic";
 // import { Gallery } from '../components/images/gallery';
 
@@ -71,16 +71,7 @@ const Artist = ({ data }) => {
         </Link>
       </div>
 
-     <Carousel
-        showIndicators={false}
-        showThumbs={false}
-        infiniteLoop={true}
-        transitionTime={0}
-        showStatus={false}
-        onChange={index => updateCurrentSlide(index)}
-      >
-        {artistGallery}
-      </Carousel>     
+  
 
 
       <div className="artist-artist-title-and-counter-con">

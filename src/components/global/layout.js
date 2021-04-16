@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import { Location } from "@reach/router";
 import styled from "styled-components";
 import { BaseCSS, GridThemeProvider } from "styled-bootstrap-grid";
@@ -14,8 +14,7 @@ import { DefaultSEO } from "./default-seo";
 const Container = styled.div`
   position: relative;
 
-  display: flex;
-  min-height: 100vh;
+  display: flex;  
   flex-direction: column;
 
   width: 100%;
