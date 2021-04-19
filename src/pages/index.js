@@ -227,7 +227,6 @@ const Index = ({ data }) => {
   const scrollSpyArtistsListLi = arrayFour.filter(content => content.node.data.index_image !== null)
   .map((content, index) => {
     return (
-
       <li key={index} className={content.node.data.artist_title.text}>
         <p className="artist-title">{content.node.data.artist_title.text}</p>        
           <Link 
@@ -236,8 +235,7 @@ const Index = ({ data }) => {
               content.node.data.index_image
             )}`}            
             >
-            <img            
-              
+            <img                          
               src={content.node.data.index_image.fluid.srcWebp}
             />    
           </Link>    
