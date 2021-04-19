@@ -4,13 +4,13 @@
 */
 body.single-artist-body {
   /*overflow: hidden;*/
-  touch-action: manipulation;
   /*height: 100%;*/
+  touch-action: manipulation;
+  
 }
 /*#___gatsby {
   height: 100%;
 }
-
 #gatsby-focus-wrapper{
   height: 100%;
 }
@@ -37,26 +37,11 @@ ul.slider {
   /*height: 100%;*/
   height: 100%;
 }
-/*@media (hover: none){
-  .carousel .slide {
-    height: 90vh;
-  } 
-}*/
-
-/*@media only screen and (max-width: 480px) {
-  .carousel .slide {
-    height: 90vh;
-  }   
-}*/
-.carousel .slide img {
-  /*margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);*/
-  /*transform: translate(0%, 16%);*/
+@media (hover: none) {
 }
+.carousel .slide img {
+}
+
 .carousel .control-next.control-arrow {
   background-color: none;
   width: 50%;
