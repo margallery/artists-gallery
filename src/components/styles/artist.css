@@ -1,13 +1,13 @@
-html.single-artist-html {
+/*html.single-artist-html {
   height: 100%;
 }
-
+*/
 body.single-artist-body {
   /*overflow: hidden;*/
   touch-action: manipulation;
-  height: 100%;
+  /*height: 100%;*/
 }
-#___gatsby {
+/*#___gatsby {
   height: 100%;
 }
 
@@ -28,13 +28,14 @@ body.single-artist-body {
 }
 ul.slider {
   height: 100%;
-}
+}*/
 .carousel .slide {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100%;
+  /*height: 100%;*/
+  height: 100vh;
 }
 /*@media (hover: none){
   .carousel .slide {

@@ -11,7 +11,7 @@ import { ImageOrientation } from "../components/utils/image-orientation";
 import "../components/styles/artist.css";
 import exitBlack from "../../public/icons/exit-black.png";
 import { Helmet } from 'react-helmet';
-
+import Div100vh from 'react-div-100vh'
 
 
 
@@ -58,7 +58,7 @@ const Artist = ({ data }) => {
 
 
 
-
+  
     <div className='single-artist-page-con'>
 
       <Helmet>
@@ -72,7 +72,7 @@ const Artist = ({ data }) => {
         </Link>
       </div>
 
-
+    <Div100vh>
      <Carousel
         showIndicators={false}
         showThumbs={false}
@@ -83,7 +83,7 @@ const Artist = ({ data }) => {
       >
         {artistGallery}
       </Carousel>  
-  
+    </Div100vh>
 
 
       <div className="artist-artist-title-and-counter-con">
@@ -95,6 +95,8 @@ const Artist = ({ data }) => {
         </p>
       </div>     
     </div>
+  
+
   );
 };
 
