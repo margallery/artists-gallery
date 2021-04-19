@@ -117,7 +117,9 @@ const Index = ({ data }) => {
         <li onClick={() =>
             document.querySelector("#group-P").scrollIntoView({
               behavior: "smooth", block: "start",})}>P</li>
-        <li>Q</li>
+        <li onClick={() =>
+            document.querySelector("#group-R").scrollIntoView({
+              behavior: "smooth", block: "start",})}>Q</li>
         <li onClick={() =>
             document.querySelector("#group-R").scrollIntoView({
               behavior: "smooth", block: "start",})}>R</li>
