@@ -13,6 +13,7 @@ import Scrollspy from "react-scrollspy";
 import burgerBlack from "../../public/icons/burger-black.png";
 import exitBlack from "../../public/icons/exit-black.png";
 import exitWhite from "../../public/icons/exit-white.png";
+import Div100vh from 'react-div-100vh'
 
 const Index = ({ data }) => {
 
@@ -295,15 +296,18 @@ const Index = ({ data }) => {
         </Scrollspy>
       </div>
 
-      <div className="artist-list-con">
-        <div className="artist-list">
-        {alphabet}
-                  
-        </div>
-        <h1 className='artist-title scrollSpyFix'>
-          By Martinez Gallery
-        </h1>
-      </div>  
+      <Div100vh>
+        <div className="artist-list-con">
+          <div className="artist-list">
+          {alphabet}
+                    
+          </div>
+          <h1 className='artist-title scrollSpyFix'>
+            By Martinez Gallery
+          </h1>
+        </div> 
+      </Div100vh>
+
 
       
 
