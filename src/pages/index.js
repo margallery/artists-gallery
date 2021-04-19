@@ -224,7 +224,7 @@ const Index = ({ data }) => {
   const scrollSpyArtistsItemsArray = arrayFour.map(
     (content, index) => content.node.data.artist_title.text
   );
-  const scrollSpyArtistsListLi = arrayFour.filter(index_img => content.node.data.index_image !== null)
+  const scrollSpyArtistsListLi = arrayFour.filter(content => content.node.data.index_image !== null)
   .map((content, index) => {
     return (
 
