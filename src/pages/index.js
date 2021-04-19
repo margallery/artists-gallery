@@ -220,19 +220,12 @@ const Index = ({ data }) => {
 
 
 
-
-
-
-
-
-
-
-
   // SCROLL SPY
   const scrollSpyArtistsItemsArray = arrayFour.map(
     (content, index) => content.node.data.artist_title.text
   );
-  const scrollSpyArtistsListLi = arrayFour.map((content, index) => {
+  const scrollSpyArtistsListLi = arrayFour.filter(index_img => content.node.data.index_image !== null)
+  .map((content, index) => {
     return (
 
       <li key={index} className={content.node.data.artist_title.text}>
