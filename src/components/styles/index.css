@@ -4,20 +4,9 @@
 
 .artist-list-con {
   z-index: 1000;
-
-  width: 100%;
-  height:100%;
-  position:fixed;
-  overflow:scroll;
-  scroll-snap-type: y mandatory;
 }
 @media (hover: none) {
-  .artist-list-con {
-    scroll-snap-type: none;    
-  } 
-  h1.artist-title{
-   scroll-snap-align: none;   
-  }
+
 }
 
 .artist-list {
@@ -35,7 +24,6 @@ h1.artist-title {
   width:auto;
   width: fit-content;
   display:inline-block;
-  scroll-snap-align: start;
 }
 
 @media (min-width: 1650px) {
