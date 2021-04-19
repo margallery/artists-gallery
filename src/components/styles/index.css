@@ -11,6 +11,12 @@
   overflow:scroll;
   scroll-snap-type: y mandatory;
 }
+@media (hover: none) {
+  .artist-list-con {
+    scroll-snap-type: none;    
+  } 
+
+}
 .artist-list {
   margin-top: 5px;
   margin-left: 47px;
