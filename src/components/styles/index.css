@@ -4,10 +4,17 @@
 
 .artist-list-con {
   z-index: 1000;
+
+  width: 100vw;
+  height:100vh;
+  position:fixed;
+  overflow:scroll;
+  scroll-snap-type: y mandatory;
 }
 .artist-list {
   margin-top: 5px;
   margin-left: 47px;
+
 }
 
 h1.artist-title {
@@ -20,6 +27,7 @@ h1.artist-title {
   width:auto;
   width: fit-content;
   display:inline-block;
+  scroll-snap-align: start;
 }
 
 @media (min-width: 1650px) {
