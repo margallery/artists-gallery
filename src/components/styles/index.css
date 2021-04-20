@@ -111,14 +111,16 @@ h1.scrollSpyFix {
 ul.alphabet-nav {
   position: fixed;
   z-index:4000;
-  top: -17px;
-  padding-top: 18px;
-  padding-right:14px;
+
   height:100%;
   text-align: center;  
   overflow: scroll;
-  padding-left:14px;
-  margin-top:17px;   
+
+  top: -17px;
+  margin-top:17px;
+  padding-top: 18px;
+  padding-right:14px; 
+  padding-left:14px; 
 }
 ul.alphabet-nav::-webkit-scrollbar {
   display: none;
@@ -129,6 +131,7 @@ ul.alphabet-nav li {
   line-height: 1.8;
   font-size: 17px;  
   color:black;
+  cursor: pointer;
 }
 @media (min-width: 1650px) {
   ul.alphabet-nav li {
@@ -137,6 +140,9 @@ ul.alphabet-nav li {
   }  
 }
 @media (max-width: 480px) {
+  ul.alphabet-nav {
+    padding-right:30px;
+  }
   ul.alphabet-nav li {
     line-height: 1.8;
     font-size: 20px;  
@@ -180,14 +186,20 @@ ul.alphabet-nav li {
   float: left;
   position:absolute;
 }
-p.about-text {
+.about-text-con p {
   color:white;
   line-height: 1.1;
   font-family: 'Helvetica Neue LT Pro';
   font-weight: normal;
   font-size: 3.5vw;
   margin-left: 20px;
-  margin-top: 20px; 
+  margin-top: 20px;   
+}
+.about-text-con p a {
+  color: blue;
+}
+p.about-text {
+
 }
 @media (min-width: 1650px) {
   .about-button-con {

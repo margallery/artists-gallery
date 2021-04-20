@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/@reach/router/index.js"), require("crypto"), require("http"), require("https"), require("/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"), require("react-helmet"), require("zlib"));
+		module.exports = factory(require("/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/@reach/router/index.js"), require("crypto"), require("fs"), require("http"), require("https"), require("/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"), require("zlib"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/@reach/router/index.js", "crypto", "http", "https", "/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/lodash/merge.js", "react", "react-dom/server", "react-helmet", "zlib"], factory);
+		define("lib", ["/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/@reach/router/index.js", "crypto", "fs", "http", "https", "/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet", "zlib"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/@reach/router/index.js"), require("crypto"), require("http"), require("https"), require("/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"), require("react-helmet"), require("zlib"));
+		exports["lib"] = factory(require("/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/@reach/router/index.js"), require("crypto"), require("fs"), require("http"), require("https"), require("/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"), require("zlib"));
 	else
-		root["lib"] = factory(root["/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/@reach/router/index.js"], root["crypto"], root["http"], root["https"], root["/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"], root["react-helmet"], root["zlib"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_crypto__, __WEBPACK_EXTERNAL_MODULE_http__, __WEBPACK_EXTERNAL_MODULE_https__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__, __WEBPACK_EXTERNAL_MODULE_zlib__) {
+		root["lib"] = factory(root["/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/@reach/router/index.js"], root["crypto"], root["fs"], root["http"], root["https"], root["/Users/theodoreford/Documents/01_projects/martinez/02_dev/03_react_v2/Martinez/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"], root["zlib"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_crypto__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_http__, __WEBPACK_EXTERNAL_MODULE_https__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__, __WEBPACK_EXTERNAL_MODULE_zlib__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -118,6 +118,24 @@ var plugins = [{
     "namespace": "",
     "transpileTemplateLiterals": true,
     "pure": false
+  }
+}, {
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "name": "Website Name",
+    "short_name": "Website Name",
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "display": "standalone",
+    "icon": "src/img/favicon.png",
+    "legacy": true,
+    "theme_color_in_head": true,
+    "cache_busting_mode": "query",
+    "crossOrigin": "anonymous",
+    "include_favicon": true,
+    "cacheDigest": "09f36f3a332b835e88c10753a20064f9"
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-source-prismic/gatsby-ssr */ "./node_modules/gatsby-source-prismic/gatsby-ssr.js"),
@@ -14703,6 +14721,243 @@ module.exports = function (_ref) {
       props = _ref.props;
   return /*#__PURE__*/React.createElement(Layout, props, element);
 };
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-manifest/common.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/gatsby-plugin-manifest/common.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _fs = _interopRequireDefault(__webpack_require__(/*! fs */ "fs"));
+
+var _path = _interopRequireDefault(__webpack_require__(/*! path */ "path"));
+
+exports.favicons = [{
+  src: "favicon-32x32.png",
+  sizes: "32x32",
+  type: "image/png"
+}]; // default icons for generating icons
+
+exports.defaultIcons = [{
+  src: "icons/icon-48x48.png",
+  sizes: "48x48",
+  type: "image/png"
+}, {
+  src: "icons/icon-72x72.png",
+  sizes: "72x72",
+  type: "image/png"
+}, {
+  src: "icons/icon-96x96.png",
+  sizes: "96x96",
+  type: "image/png"
+}, {
+  src: "icons/icon-144x144.png",
+  sizes: "144x144",
+  type: "image/png"
+}, {
+  src: "icons/icon-192x192.png",
+  sizes: "192x192",
+  type: "image/png"
+}, {
+  src: "icons/icon-256x256.png",
+  sizes: "256x256",
+  type: "image/png"
+}, {
+  src: "icons/icon-384x384.png",
+  sizes: "384x384",
+  type: "image/png"
+}, {
+  src: "icons/icon-512x512.png",
+  sizes: "512x512",
+  type: "image/png"
+}];
+/**
+ * Check if the icon exists on the filesystem
+ *
+ * @param {String} srcIcon Path of the icon
+ */
+
+exports.doesIconExist = function doesIconExist(srcIcon) {
+  try {
+    return _fs.default.statSync(srcIcon).isFile();
+  } catch (e) {
+    if (e.code !== "ENOENT") {
+      throw e;
+    }
+
+    return false;
+  }
+};
+/**
+ * @param {string} path The generic path to an icon
+ * @param {string} digest The digest of the icon provided in the plugin's options.
+ */
+
+
+exports.addDigestToPath = function (path, digest, method) {
+  if (method === "name") {
+    var parsedPath = _path.default.parse(path);
+
+    return parsedPath.dir + "/" + parsedPath.name + "-" + digest + parsedPath.ext;
+  }
+
+  if (method === "query") {
+    return path + "?v=" + digest;
+  }
+
+  return path;
+};
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/gatsby-plugin-manifest/gatsby-ssr.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
+
+var _gatsby = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+
+var _common = __webpack_require__(/*! ./common.js */ "./node_modules/gatsby-plugin-manifest/common.js");
+
+var _getManifestPathname = _interopRequireDefault(__webpack_require__(/*! ./get-manifest-pathname */ "./node_modules/gatsby-plugin-manifest/get-manifest-pathname.js")); // TODO: remove for v3
+
+
+var withPrefix = _gatsby.withAssetPrefix || _gatsby.withPrefix;
+
+exports.onRenderBody = function (_ref, _ref2) {
+  var setHeadComponents = _ref.setHeadComponents,
+      _ref$pathname = _ref.pathname,
+      pathname = _ref$pathname === void 0 ? "/" : _ref$pathname;
+  var localize = _ref2.localize,
+      legacy = _ref2.legacy,
+      cacheBusting = _ref2.cache_busting_mode,
+      cacheDigest = _ref2.cacheDigest,
+      icon = _ref2.icon,
+      pluginIcons = _ref2.icons,
+      insertFaviconLinkTag = _ref2.include_favicon,
+      insertMetaTag = _ref2.theme_color_in_head,
+      theme_color = _ref2.theme_color,
+      _ref2$crossOrigin = _ref2.crossOrigin,
+      crossOrigin = _ref2$crossOrigin === void 0 ? "anonymous" : _ref2$crossOrigin; // We use this to build a final array to pass as the argument to setHeadComponents at the end of onRenderBody.
+
+  var headComponents = [];
+  var srcIconExists = !!icon;
+  var icons = pluginIcons || _common.defaultIcons;
+  var manifestFileName = (0, _getManifestPathname.default)(pathname, localize); // If icons were generated, also add a favicon link.
+
+  if (srcIconExists) {
+    if (insertFaviconLinkTag) {
+      _common.favicons.forEach(function (favicon) {
+        headComponents.push( /*#__PURE__*/React.createElement("link", {
+          key: "gatsby-plugin-manifest-icon-link-png",
+          rel: "icon",
+          href: withPrefix((0, _common.addDigestToPath)(favicon.src, cacheDigest, cacheBusting)),
+          type: "image/png"
+        }));
+      });
+
+      if (icon === null || icon === void 0 ? void 0 : icon.endsWith(".svg")) {
+        headComponents.push( /*#__PURE__*/React.createElement("link", {
+          key: "gatsby-plugin-manifest-icon-link-svg",
+          rel: "icon",
+          href: withPrefix((0, _common.addDigestToPath)("favicon.svg", cacheDigest, cacheBusting)),
+          type: "image/svg+xml"
+        }));
+      }
+    }
+  } // Add manifest link tag.
+
+
+  headComponents.push( /*#__PURE__*/React.createElement("link", {
+    key: "gatsby-plugin-manifest-link",
+    rel: "manifest",
+    href: (0, _gatsby.withPrefix)("/" + manifestFileName),
+    crossOrigin: crossOrigin
+  })); // The user has an option to opt out of the theme_color meta tag being inserted into the head.
+
+  if (theme_color && insertMetaTag) {
+    headComponents.push( /*#__PURE__*/React.createElement("meta", {
+      key: "gatsby-plugin-manifest-meta",
+      name: "theme-color",
+      content: theme_color
+    }));
+  }
+
+  if (legacy) {
+    icons.forEach(function (icon) {
+      headComponents.push( /*#__PURE__*/React.createElement("link", {
+        key: "gatsby-plugin-manifest-apple-touch-icon-" + icon.sizes,
+        rel: "apple-touch-icon",
+        sizes: icon.sizes,
+        href: withPrefix((0, _common.addDigestToPath)(icon.src, cacheDigest, srcIconExists ? cacheBusting : "none"))
+      }));
+    });
+  }
+
+  setHeadComponents(headComponents);
+  return true;
+};
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-manifest/get-manifest-pathname.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-manifest/get-manifest-pathname.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+/**
+ * Get a manifest filename depending on localized pathname
+ *
+ * @param {string} pathname
+ * @param {Array<{start_url: string, lang: string}>} localizedManifests
+ * @return string
+ */
+
+var _default = function _default(pathname, localizedManifests) {
+  var defaultFilename = "manifest.webmanifest";
+
+  if (!Array.isArray(localizedManifests)) {
+    return defaultFilename;
+  }
+
+  var localizedManifest = localizedManifests.find(function (app) {
+    return pathname.startsWith(app.start_url);
+  });
+
+  if (!localizedManifest) {
+    return defaultFilename;
+  }
+
+  return "manifest_" + localizedManifest.lang + ".webmanifest";
+};
+
+exports.default = _default;
 
 /***/ }),
 
@@ -55400,6 +55655,17 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_crypto__;
 
 /***/ }),
 
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
+
+/***/ }),
+
 /***/ "http":
 /*!***********************!*\
   !*** external "http" ***!
@@ -55430,6 +55696,17 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_https__;
 /***/ (function(module, exports) {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_lodash_merge__;
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_path__;
 
 /***/ }),
 

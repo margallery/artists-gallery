@@ -7,13 +7,15 @@ import { orderBy, compare } from "natural-orderby";
 import { useMeasure } from "react-use";
 import { ImageOrientation } from "../components/utils/image-orientation";
 import { useInView } from "react-intersection-observer";
+import { RichText } from 'prismic-reactjs';
 import "../components/styles/index.css";
 import Scrollspy from "react-scrollspy";
 // import { SingleArtist } from "../components/artists/single-artist";
 import burgerBlack from "../../public/icons/burger-black.png";
 import exitBlack from "../../public/icons/exit-black.png";
 import exitWhite from "../../public/icons/exit-white.png";
-import Div100vh from 'react-div-100vh'
+import Div100vh from 'react-div-100vh';
+import { Helmet } from 'react-helmet';
 
 const Index = ({ data }) => {
 
@@ -41,10 +43,12 @@ const Index = ({ data }) => {
 
 
   const About = () => {
+    const document = data.prismicAboutPage.data;
     const [isActive, setActive] = useState("false");
     const hangleToggle = () => {
       setActive(!isActive);
     };
+    // <RichText render={data.prismicAboutPage.data.about_content.raw} /> 
     return (
       <div>
         <div onClick={hangleToggle} className="about-button-con">
@@ -55,11 +59,12 @@ const Index = ({ data }) => {
           <div onClick={hangleToggle} className="about-exit-button-con">
             <img src={exitWhite} />
           </div>
-          <div className="about-text-con">
-            <p className="about-text">
-              {data.prismicAboutPage.data.about_content.text}
-              
-            </p>
+          <div className="about-text-con">  
+            <div
+               dangerouslySetInnerHTML={{
+               __html: data.prismicAboutPage.data.about_content.html,
+               }}
+             />                   
           </div>
         </div>
       </div>
@@ -233,7 +238,10 @@ const Index = ({ data }) => {
   const scrollSpyArtistsItemsArray = arrayFour.map(
     (content, index) => content.node.data.artist_title.text
   );
-  const scrollSpyArtistsListLi = arrayFour.map((content, index) => {
+
+
+  const scrollSpyArtistsListLi = arrayFour.filter(content => content.node.data.index_image.fluid !== null)
+  .map((content, index) => {
     return (
 
       <li key={index} className={content.node.data.artist_title.text}>
@@ -283,6 +291,11 @@ const Index = ({ data }) => {
 
   return (
     <div>
+
+      <Helmet>
+        <title>Martinez Gallery Index</title>
+      </Helmet>
+
       <About />
       <AlphabetNav />
 
@@ -296,7 +309,7 @@ const Index = ({ data }) => {
         </Scrollspy>
       </div>
 
-      <Div100vh>
+
         <div className="artist-list-con">
           <div className="artist-list">
           {alphabet}
@@ -306,7 +319,7 @@ const Index = ({ data }) => {
             By Martinez Gallery
           </h1>
         </div> 
-      </Div100vh>
+
 
 
       
@@ -323,6 +336,7 @@ export const query = graphql`
       data {
         about_content {
           text
+          html
         }
       }
     }
@@ -334,6 +348,7 @@ export const query = graphql`
             artist_title {
               html
               text
+              raw
             }
             index_image {
               fluid {
