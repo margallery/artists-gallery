@@ -239,7 +239,7 @@ const Index = ({ data }) => {
     (content, index) => content.node.data.artist_title.text
   );
 
-
+  // const scrollSpyArtistsListLi = arrayFour.map((content, index) => {
   const scrollSpyArtistsListLi = arrayFour.filter(content => content.node.data.index_image.fluid !== null)
   .map((content, index) => {
     return (
