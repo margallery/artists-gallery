@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { graphql, Link } from "gatsby";
-// import styled from "styled-components";
 import { withPreview } from "gatsby-source-prismic";
-// import { Gallery } from '../components/images/gallery';
+import { Helmet } from 'react-helmet';
+import Div100vh from 'react-div-100vh';
 
-import { GalleryTwo } from "../components/images/galleryTwo";
-import "react-responsive-carousel/lib/styles/carousel.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { ImageOrientation } from "../components/utils/image-orientation";
 import "../components/styles/artist.css";
+import "react-responsive-carousel/lib/styles/carousel.css"; // requires a loader
 import exitBlack from "../../public/icons/exit-black.png";
-import { Helmet } from 'react-helmet';
-import Div100vh from 'react-div-100vh'
+
 
 
 
@@ -36,8 +34,6 @@ const Artist = ({ data }) => {
     }
   };
 
-
-
   // console.log(data.prismicArtist.data.gallery);
     const artistGallery = data.prismicArtist.data.gallery.filter(artist => artist.artist_image.fluid !== null)
       .map((artist, index) => (
@@ -53,17 +49,13 @@ const Artist = ({ data }) => {
       />
     ));    
 
-
-  return (
-
-
-
-  
+  return (  
     <div className='single-artist-page-con'>
 
       <Helmet>
           <html className='single-artist-html' />
           <body className="single-artist-body" />
+          <title>{data.prismicArtist.data.artist_title.text} – Martinez Gallery</title>
       </Helmet>
 
       <div className="exit-artist-button-con">

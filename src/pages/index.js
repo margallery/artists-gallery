@@ -3,19 +3,16 @@ import ReactDOM, { findDOMNode } from "react-dom";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import { withPreview } from "gatsby-source-prismic";
-import { orderBy, compare } from "natural-orderby";
-import { useMeasure } from "react-use";
 import { ImageOrientation } from "../components/utils/image-orientation";
-import { useInView } from "react-intersection-observer";
-import { RichText } from 'prismic-reactjs';
+import { Helmet } from 'react-helmet';
+import Div100vh from 'react-div-100vh';
 import "../components/styles/index.css";
 import Scrollspy from "react-scrollspy";
-// import { SingleArtist } from "../components/artists/single-artist";
 import burgerBlack from "../../public/icons/burger-black.png";
 import exitBlack from "../../public/icons/exit-black.png";
 import exitWhite from "../../public/icons/exit-white.png";
-import Div100vh from 'react-div-100vh';
-import { Helmet } from 'react-helmet';
+
+
 
 const Index = ({ data }) => {
 
@@ -48,7 +45,6 @@ const Index = ({ data }) => {
     const hangleToggle = () => {
       setActive(!isActive);
     };
-    // <RichText render={data.prismicAboutPage.data.about_content.raw} /> 
     return (
       <div>
         <div onClick={hangleToggle} className="about-button-con">
@@ -225,15 +221,6 @@ const Index = ({ data }) => {
   });
 
 
-
-
-
-
-
-
-
-
-
   // SCROLL SPY
   const scrollSpyArtistsItemsArray = arrayFour.map(
     (content, index) => content.node.data.artist_title.text
@@ -293,7 +280,7 @@ const Index = ({ data }) => {
     <div>
 
       <Helmet>
-        <title>Martinez Gallery Index</title>
+        <title>Artists – Martinez Gallery</title>
       </Helmet>
 
       <About />
@@ -309,20 +296,15 @@ const Index = ({ data }) => {
         </Scrollspy>
       </div>
 
-
-        <div className="artist-list-con">
-          <div className="artist-list">
-          {alphabet}
-                    
-          </div>
-          <h1 className='artist-title scrollSpyFix'>
-            By Martinez Gallery
-          </h1>
-        </div> 
-
-
-
-      
+      <div className="artist-list-con">
+        <div className="artist-list">
+        {alphabet}
+                  
+        </div>
+        <h1 className='artist-title scrollSpyFix'>
+          By Martinez Gallery
+        </h1>
+      </div> 
 
     </div>
   );
