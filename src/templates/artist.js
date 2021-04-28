@@ -3,11 +3,12 @@ import { graphql, Link } from "gatsby";
 import { withPreview } from "gatsby-source-prismic";
 import { Helmet } from 'react-helmet';
 import Div100vh from 'react-div-100vh';
-
-import { Carousel } from "react-responsive-carousel";
 import { ImageOrientation } from "../components/utils/image-orientation";
-import "../components/styles/artist.css";
+
 import "react-responsive-carousel/lib/styles/carousel.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import "../components/styles/artist.css";
+
 import exitBlack from "../../public/icons/exit-black.png";
 
 

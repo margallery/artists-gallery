@@ -231,7 +231,7 @@ var plugins = [{
           "about_content": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "multi": "paragraph, em, hyperlink",
               "label": "About Content"
             }
           }
