@@ -19,7 +19,8 @@ h1.artist-title {
   font-family: 'Stencil', helvetica;
   font-weight: normal;
   /*font-size: 9.3vw;*/
-  font-size:120px;
+  /*font-size:120px;*/
+  font-size:116px;
   height:auto;
   width:auto;
   width: fit-content;
@@ -29,12 +30,14 @@ h1.artist-title {
 @media (min-width: 1650px) {
   h1.artist-title {
     /*font-size: 7.65vw;*/
+    /*font-size: 160px;*/
     font-size: 160px;
   } 
 }
 
 @media (max-width: 1024px) {
   h1.artist-title {
+    /*font-size:100px;*/
     font-size:100px;
     /*font-size: 16vw;*/
   }
@@ -121,6 +124,7 @@ ul.alphabet-nav {
   padding-top: 18px;
   padding-right:14px; 
   padding-left:14px; 
+  padding-bottom: 10px;
 }
 ul.alphabet-nav::-webkit-scrollbar {
   display: none;
