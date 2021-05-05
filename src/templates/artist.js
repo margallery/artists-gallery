@@ -46,7 +46,7 @@ const Artist = ({ data }) => {
         src={artist.artist_image.fluid.srcWebp}
         srcSet={artist.artist_image.fluid.srcSetWebp}
         // alt={content.index_image.alt}
-        loading="lazy"
+        // loading="lazy"
       />
     ));    
 

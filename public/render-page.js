@@ -135,7 +135,7 @@ var plugins = [{
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "09f36f3a332b835e88c10753a20064f9"
+    "cacheDigest": "0bab8ad8360e7882a92f8c6ee46f2cb0"
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-source-prismic/gatsby-ssr */ "./node_modules/gatsby-source-prismic/gatsby-ssr.js"),
