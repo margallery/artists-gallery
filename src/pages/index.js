@@ -36,31 +36,6 @@ const Index = ({ data }) => {
   // })
 
 
-  const SingleArtist = ({ index, data, content }) => {
-    return (
-      <a 
-        className="artist-link" 
-        href={content.node.uid}         
-      >
-        <h1 className="artist-title" id={content.node.data.artist_title.text}>
-          {content.node.data.artist_title.text}
-        </h1>
-        <br />
-      </a>
-    );
-  };
-
-
-  const artistList = data.allPrismicArtist.edges.map((content, index) => {
-    return (
-      <SingleArtist
-        key={`artist_${index}`}
-        index={index}
-        data={data}
-        content={content}
-      />
-    );
-  });
 
 
 
@@ -96,8 +71,8 @@ const Index = ({ data }) => {
     return (
       <ul className="alphabet-nav">
         <li onClick={() =>
-            document.querySelector("#group-1").scrollIntoView({
-              behavior: "smooth", block: "start",})}>0</li>        
+            document.querySelector("#group-0").scrollIntoView({
+              behavior: "smooth", block: "start",})}>0</li>                
         <li onClick={() =>
             document.querySelector("#group-A").scrollIntoView({
               behavior: "smooth", block: "start",})}>A</li>
@@ -154,10 +129,7 @@ const Index = ({ data }) => {
               behavior: "smooth", block: "start",})}>R</li>
         <li onClick={() =>
             document.querySelector("#group-S").scrollIntoView({
-              behavior: "smooth", block: "start",})}>S</li>  
-        <li onClick={() =>
-            document.querySelector("#group-T").scrollIntoView({
-              behavior: "smooth", block: "start",})}>T</li>                                                                                                                                                                                                                                            
+              behavior: "smooth", block: "start",})}>S</li>                                                                                                                                                                                                                              
         <li onClick={() =>
             document.querySelector("#group-U").scrollIntoView({
               behavior: "smooth", block: "start",})}>U</li>
@@ -175,7 +147,7 @@ const Index = ({ data }) => {
               behavior: "smooth", block: "start",})}>Y</li>
         <li onClick={() =>
             document.querySelector("#group-Z").scrollIntoView({
-              behavior: "smooth", block: "start",})}>Z</li>                                                                  
+              behavior: "smooth", block: "start",})}>Z</li>                                                                                
       </ul>
     );
   };
@@ -183,21 +155,22 @@ const Index = ({ data }) => {
 
   const arrayThree = Object.values(data.allPrismicArtist.edges);
 
-  // const arrayFour = arrayThree.sort(
-  //   (a, b) =>
-  //     isFinite(a.node.data.artist_title.text[0]) -
-  //       isFinite(b.node.data.artist_title.text[0]) ||
-  //     a.node.data.artist_title.text.localeCompare(b, undefined, {
-  //       numeric: true,
-  //       sensitivity: "base",
-  //     })
-  // );
+
+  const arrayFour = arrayThree.sort((a, b) =>  a.node.data.artist_title.text.localeCompare(b.node.data.artist_title.text, undefined, { numeric: true, sensitivity: 'base' }));
+  console.log('heya');
+  console.log(arrayFour);
 
   // https://stackoverflow.com/questions/51009090/sort-and-group-objects-alphabetically-by-first-letter-javascript
-  let dataTwo = arrayThree.reduce((r, e) => {
-    // let dataTwo = arrayTwo.reduce((r, e) => {
+  let dataTwo = arrayFour.reduce((r, e) => {
     // get first letter of name of current element
     let group = e.node.data.artist_title.text[0];
+
+    function isNumeric(num){
+      return !isNaN(num)
+    }
+    if (isNumeric(group)) {   
+      group = 0;
+    }
     // if there is no property in accumulator with this letter create it
     if (!r[group]) r[group] = { group, children: [e] };
     // if there is push current element to children array for that letter
@@ -210,24 +183,48 @@ const Index = ({ data }) => {
   // we use Object.values method
   const result = Object.values(dataTwo);
 
-  // const finalResult = result.sort(
-  //   (a, b) =>
-  //     isFinite(a.group[0]) - isFinite(b.group[0]) ||
-  //     a.group.localeCompare(b, undefined, {
-  //       numeric: true,
-  //       sensitivity: "base",
-  //     })
-  // );
+  const finalResult = result.sort(
+    (a, b) =>
+      a.group.localeCompare(b.group, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      })
+  );  
+
+  // const SingleArtist = ({ index, data, content }) => {
+  //   return (
+  //     <a 
+  //       className="artist-link" 
+  //       href={content.node.uid}         
+  //     >
+  //       <h1 className="artist-title" id={content.node.data.artist_title.text}>
+  //         {content.node.data.artist_title.text}
+  //       </h1>
+  //       <br />
+  //     </a>
+  //   );
+  // };
+
+
+  // const artistList = data.allPrismicArtist.edges.map((content, index) => {
+  //   return (
+  //     <SingleArtist
+  //       key={`artist_${index}`}
+  //       index={index}
+  //       data={data}
+  //       content={content}
+  //     />
+  //   );
+  // });
 
 
   // SCROLL SPY
-  // THESE TWO GO IN SCROLL SPY
-  const scrollSpyArtistsItemsArray = arrayThree.map(
+  const scrollSpyArtistsItemsArray = arrayFour.map(
     (content, index) => content.node.data.artist_title.text
   );
 
   // const scrollSpyArtistsListLi = arrayFour.map((content, index) => {
-  const scrollSpyArtistsListLi = arrayThree.filter(content => content.node.data.index_image.fluid !== null)
+  const scrollSpyArtistsListLi = arrayFour.filter(content => content.node.data.index_image.fluid !== null)
   .map((content, index) => {
     return (
 
@@ -248,14 +245,12 @@ const Index = ({ data }) => {
     );
   });
 
-
-  // THIS ONE goes in artist list
-  const alphabet = result.map((content, index) => {
+  const alphabet = finalResult.map((content, index) => {
     const alphabetChildren = content.children.map((content, index) => {
       return (
         <div key={index}>
-          <Link 
-            to={content.node.uid}
+          <a 
+            href={content.node.uid}
             // onClick={handleClick}
           >
             <h1
@@ -265,7 +260,7 @@ const Index = ({ data }) => {
               {" "}
               {content.node.data.artist_title.text}
             </h1>
-          </Link>
+          </a>
         </div>
       );
     });

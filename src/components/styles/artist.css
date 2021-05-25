@@ -36,6 +36,9 @@ ul.slider {
   width: 100vw;
   /*height: 100%;*/
   height: 100%;
+  
+  /* bug fix for carousel images overlap on really wide images and when you scale down the browser */
+  overflow: hidden;
 }
 @media (hover: none) {
 }
