@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import ReactDOM, { findDOMNode } from "react-dom";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, useScrollRestoration } from "gatsby";
 import styled from "styled-components";
 import { withPreview } from "gatsby-source-prismic";
 import { ImageOrientation } from "../components/utils/image-orientation";
@@ -13,31 +13,7 @@ import exitBlack from "../../public/icons/exit-black.png";
 import exitWhite from "../../public/icons/exit-white.png";
 
 
-
 const Index = ({ data }) => {
-
-  // const [scrollPosition, setScrollPosition] = React.useState(window.localStorage.getItem('LSScrollPosition') || 0)
-  // const [scrollPosition, setScrollPosition] = React.useState(0)
-
-  // const handleClick = e => {
-  //   // e.preventDefault();
-  //   console.log('hello');
-  //   setScrollPosition(window.pageYOffset);      
-  //   // console.log(scrollPosition);
-  //   // assignScrollToLS();               
-  // } 
-
-  // window.localStorage.setItem('LSScrollPosition', scrollPosition);
-       
-  // React.useEffect(() => {
-  //   const scrollPositionFromLS = window.localStorage.getItem('LSScrollPosition')
-  //   console.log(scrollPositionFromLS)
-  //   window.scrollTo(0, parseInt(scrollPositionFromLS))
-  // })
-
-
-
-
 
   const About = () => {
     const document = data.prismicAboutPage.data;
@@ -164,7 +140,7 @@ const Index = ({ data }) => {
   let dataTwo = arrayFour.reduce((r, e) => {
     // get first letter of name of current element
     let group = e.node.data.artist_title.text[0];
-
+    // https://stackoverflow.com/questions/175739/built-in-way-in-javascript-to-check-if-a-string-is-a-valid-number
     function isNumeric(num){
       return !isNaN(num)
     }
@@ -273,37 +249,40 @@ const Index = ({ data }) => {
     );
   });  
 
+
   return (
-    <div>
 
-      <Helmet>
-        <title>Artists – Martinez Gallery</title>
-      </Helmet>
+      <>
+        <Helmet>
+            <title>Artists – Martinez Gallery</title>
+          </Helmet>
 
-      <About />
-      <AlphabetNav />
+          <About />
+          <AlphabetNav />
 
-      <div className="img-con">
-        <Scrollspy
-          items={scrollSpyArtistsItemsArray}
-          currentClassName="is-current"
-          // rootEl={'.artist-list-con'}
-        >
-          {scrollSpyArtistsListLi}
-        </Scrollspy>
-      </div>
+          <div className="img-con">
+            <Scrollspy
+              items={scrollSpyArtistsItemsArray}
+              currentClassName="is-current"
+              // rootEl={'.artist-list-con'}
+            >
+              {scrollSpyArtistsListLi}
+            </Scrollspy>
+          </div>
+          <div className="artist-list-con">
+            <div className="artist-list">
+            {alphabet}
+                      
+            </div>
+            <h1 className='artist-title scrollSpyFix'>
+              
+            </h1>
+          </div> 
 
-      <div className="artist-list-con">
-        <div className="artist-list">
-        {alphabet}
-                  
-        </div>
-        <h1 className='artist-title scrollSpyFix'>
-          By Martinez Gallery
-        </h1>
-      </div> 
 
-    </div>
+      </>
+
+
   );
 };
 

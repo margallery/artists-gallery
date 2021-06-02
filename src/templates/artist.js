@@ -14,6 +14,8 @@ import exitBlack from "../../public/icons/exit-black.png";
 
 
 
+
+
 const Artist = ({ data }) => {
   // index image
   // src={data.prismicArtist.data.index_image.fluid.srcWebp}
