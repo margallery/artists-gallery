@@ -37,6 +37,15 @@ const Artist = ({ data }) => {
     }
   };
 
+  // back button that returns you to the right place on index
+  const BackButton = () => {
+    return (
+      <div className="exit-artist-button-con">
+        <img src={exitBlack} onClick={() => {window.history.back()}} />
+      </div>     
+    )
+  }  
+
   // console.log(data.prismicArtist.data.gallery);
     const artistGallery = data.prismicArtist.data.gallery.filter(artist => artist.artist_image.fluid !== null)
       .map((artist, index) => (
@@ -61,11 +70,7 @@ const Artist = ({ data }) => {
           <title>{data.prismicArtist.data.artist_title.text} – Martinez Gallery</title>
       </Helmet>
 
-      <div className="exit-artist-button-con">
-        <Link to={`/`}>
-          <img src={exitBlack} />
-        </Link>
-      </div>
+      <BackButton />
 
     <Div100vh>
      <Carousel
