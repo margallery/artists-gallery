@@ -80,7 +80,7 @@ ul.slider {
 
 .exit-artist-button-con {
   position:fixed;
-  width:82px;
+  width:70px;
   right:0;
   top:0;
   margin-right:22px;
@@ -125,7 +125,7 @@ img.artist-artist-img.square {
 
 @media (min-width: 1650px) {
   .exit-artist-button-con {
-    width:105px;
+    width:85px;
     margin-top:30px;
     margin-right:30px;
   }  
@@ -133,7 +133,7 @@ img.artist-artist-img.square {
 
 @media (max-width: 1024px) {
   .exit-artist-button-con {
-    width:70px;
+    width:60px;
     margin-top:19px;
     margin-right:19px;
   } 
