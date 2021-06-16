@@ -170,15 +170,7 @@ ul.alphabet-nav li {
 .about-con.active {
   transform: translateY(0%);
 }
-.about-button-con {
-  position:fixed;
-  width:70px;
-  right:0;
-  top:0;
-  margin-right:22px;
-  margin-top: 22px;
-  z-index:4000;
-}
+
 .about-exit-button-con {
   width: 112px;
   position: sticky;
@@ -207,6 +199,15 @@ ul.alphabet-nav li {
 }
 p.about-text {
 
+}
+.about-button-con {
+  position:fixed;
+  width:70px;
+  right:0;
+  top:0;
+  margin-right:22px;
+  margin-top: 22px;
+  z-index:4000;
 }
 @media (min-width: 1650px) {
   .about-button-con {
