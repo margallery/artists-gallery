@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"3XHS":function(t,e,a){"use strict";a.r(e);var n=a("q1tI"),r=a.n(n),u=a("WpCO");e.default=Object(u.b)((function(t){var e=t.data;return r.a.createElement(r.a.Fragment,null,r.a.createElement("div",{dangerouslySetInnerHTML:{__html:e.prismicAboutPage.data.about_title.html}}))}))}}]);
+//# sourceMappingURL=component---src-pages-about-js-e99f9c3f9c4b611ee48b.js.map
