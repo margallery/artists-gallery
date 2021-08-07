@@ -117,13 +117,13 @@ ul.alphabet-nav {
   position: fixed;
   z-index:4000;
 
-  height:100%;
+  height:auto;
   text-align: center;  
-  overflow: scroll;
+  overflow: hidden;
 
-  top: -17px;
-  margin-top:17px;
-  padding-top: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 10px;
   padding-right:14px; 
   padding-left:14px; 
   padding-bottom: 10px;
@@ -135,24 +135,16 @@ ul.alphabet-nav li {
   font-family: 'Helvetica Neue LT Pro';
   text-align: center;
   line-height: 1.8;
-  font-size: 17px;  
+  font-size: 2vh;
   color:black;
   cursor: pointer;
 }
 @media (min-width: 1650px) {
-  ul.alphabet-nav li {
-    line-height: 1.8;
-    font-size: 20px;  
-  }  
 }
 @media (max-width: 480px) {
   ul.alphabet-nav {
     padding-right:30px;
   }
-  ul.alphabet-nav li {
-    line-height: 1.8;
-    font-size: 20px;  
-  } 
 }
 
 /* - - - - - - about - - - - - */
@@ -178,6 +170,7 @@ ul.alphabet-nav li {
   top: 0;
   right:0;
   padding: 22px;
+  cursor: pointer;
 }
 .about-text-con {
   width:calc(80%);
@@ -208,6 +201,7 @@ p.about-text {
   margin-right:22px;
   margin-top: 22px;
   z-index:4000;
+  cursor: pointer;
 }
 @media (min-width: 1650px) {
   .about-button-con {

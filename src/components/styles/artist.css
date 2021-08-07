@@ -1,14 +1,13 @@
-/*html.single-artist-html {
+html.single-artist-html {
   height: 100%;
 }
-*/
+
 body.single-artist-body {
-  /*overflow: hidden;*/
-  /*height: 100%;*/
+  overflow: hidden;
+  height: 100%;
   touch-action: manipulation;
-  
 }
-/*#___gatsby {
+#___gatsby {
   height: 100%;
 }
 #gatsby-focus-wrapper{
@@ -16,8 +15,8 @@ body.single-artist-body {
 }
 .single-artist-page-con {
   height: 100%;
-}*/
-.carousel-root {
+}
+/* .carousel-root {
   height:100%;
 }
 .carousel-slider {
@@ -34,18 +33,15 @@ ul.slider {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  /*height: 100%;*/
   height: 100%;
-  
-  /* bug fix for carousel images overlap on really wide images and when you scale down the browser */
   overflow: hidden;
 }
 @media (hover: none) {
 }
 .carousel .slide img {
-}
+} */
 
-.carousel .control-next.control-arrow {
+/* .carousel .control-next.control-arrow {
   background-color: none;
   width: 50%;
   cursor: url(/icons/next@1x.png) 0 0, pointer;
@@ -55,8 +51,8 @@ ul.slider {
       )
       0 0,
     pointer;
-}
-.carousel .control-prev.control-arrow {
+} */
+/* .carousel .control-prev.control-arrow {
   background-color: none;
   width: 50%;
   cursor: url(/icons/prev@1x.png) 0 0, pointer;
@@ -66,20 +62,20 @@ ul.slider {
       )
       0 0,
     pointer;
-}
+} */
 
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
   .carousel .control-next.control-arrow {
     width: 50%;
   }
   .carousel .control-prev.control-arrow {
     width: 50%;
   }  
-}
+} */
 
 
 
-.carousel.carousel-slider .control-arrow:hover {
+/* .carousel.carousel-slider .control-arrow:hover {
   background: none;
 }
 .carousel .control-arrow:before,
@@ -87,7 +83,7 @@ ul.slider {
   border-top: 0px;
   border-bottom: 0px;
   border-left: 0px;
-}
+} */
 .artist-artist-title-and-counter-con {
   position: fixed;
   text-align: center;
@@ -99,20 +95,23 @@ ul.slider {
   font-family: 'Helvetica Neue LT Pro';
 }
 
-img.artist-artist-img.landscape {
-  height:86%;
-  width:auto;
+/* img.artist-artist-img.landscape {
+  height:86%!important;
+  width:auto!important;
+  object-fit: scale-down!important;
 }
 
 img.artist-artist-img.portrait {
-  height:86%;
-  width:auto;
+  height:86%!important;
+  width:auto!important;
+  object-fit: scale-down!important;
 }
 
 img.artist-artist-img.square {
-  height:86%;
-  width:auto;
-}
+  height:86%!important;
+  width:auto!important;
+  object-fit: scale-down!important;
+} */
 
 .exit-artist-button-con {
   position:fixed;
@@ -122,7 +121,29 @@ img.artist-artist-img.square {
   margin-right:22px;
   margin-top: 22px;
   z-index:4000;
+  cursor: pointer;
 }
+
+/* slick slider */
+.img-slider{
+  margin-top: 5vh;
+}
+.slick-slider{
+  max-height:86vw;
+  width: auto;
+}
+
+.slick-slide{
+  display: flex!important;
+  justify-content: center!important;
+}
+
+.slick-slide img{
+  height:86vh!important;
+  width: auto!important;
+}
+
+
 @media (min-width: 1650px) {
   .exit-artist-button-con {
     width:85px;
@@ -146,7 +167,7 @@ img.artist-artist-img.square {
     margin-top:20px;
   }
     
-  img.artist-artist-img.landscape {
+  /* img.artist-artist-img.landscape {
     width:90%;
     height:auto;
   }
@@ -157,7 +178,7 @@ img.artist-artist-img.square {
   img.artist-artist-img.square {
     width:90%;
     height:auto;
-  }    
+  }     */
 }
 
 
