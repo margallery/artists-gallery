@@ -23,8 +23,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   touchThreshold: 1000,
-  draggable: true,
-  lazyLoad: 'ondemand'
+  draggable: true
 };
 
 
@@ -45,7 +44,7 @@ const Artist = ({ data }) => {
       className={`artist-artist-img ${ImageOrientation(
               artist.artist_image
             )}`}
-      data-lazy={artist.artist_image.fluid.srcWebp}
+      src={artist.artist_image.fluid.srcWebp}
       srcSet={artist.artist_image.fluid.srcSetWebp}
     />
   ));    
