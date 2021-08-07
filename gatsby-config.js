@@ -52,7 +52,7 @@ module.exports = {
       resolve: `gatsby-source-prismic`,
       options: {
         repositoryName: `Martinez-Gallery`,
-        accessToken: `${process.env.API_KEY}`,
+        accessToken: `${'MC5ZSGdVUkJNQUFDTUFzcVB3.URLvv73vv73vv71FYe-_vWhUTu-_vV8a77-9Xu-_vUxbZe-_vQTvv73vv71wNwnvv71F77-9EO-_vQ'}`,
         linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
         schemas: {
           artist: require("./src/schemas/artist.json"),
